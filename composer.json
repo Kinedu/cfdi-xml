@@ -1,0 +1,36 @@
+{
+    "name": "kinedu/cfdi-xml",
+    "description": "",
+    "homepage": "https://github.com/Kinedu/cfdi-xml",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "Kinedu",
+        "cfdi"
+    ],
+    "authors": [
+        {
+            "name": "Orlando Charles",
+            "email": "orlando@kinedu.com",
+            "homepage": "https://orlandocharles.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kinedu\\CfdiXML\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kinedu\\CfdiXML\\Tests\\": "tests"
+        }
+    },
+    "prefer-stable": true
+}
