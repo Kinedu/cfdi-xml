@@ -27,7 +27,18 @@ class Node
      */
     protected $nodeName = '';
 
-    public function getName()
+    /**
+     * @return string|null
+     */
+    public function getParentNodeName()
+    {
+        return $this->parentNodeName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNodeName()
     {
         return $this->nodeName;
     }

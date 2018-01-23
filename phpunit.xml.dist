@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <phpunit bootstrap="vendor/autoload.php"
          colors="true"
          verbose="true"
@@ -9,7 +8,7 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Cfdi XML Test">
-            <directory suffix="Test.php">tests</directory>
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
