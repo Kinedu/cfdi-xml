@@ -14,7 +14,7 @@ namespace Kinedu\CfdiXML\Common;
 class Node
 {
     /**
-     * Define the parent node name, rename this attribute in inherit class.
+     * Define the parent node name.
      *
      * @var string|null
      */
@@ -28,14 +28,28 @@ class Node
     protected $nodeName = '';
 
     /**
+     *
+     *
+     * @return string|null
+     */
+    public function getWrapperNodeName()
+    {
+        return $this->wrapperNodeName ?? null;
+    }
+
+    /**
+     *
+     *
      * @return string|null
      */
     public function getParentNodeName()
     {
-        return $this->parentNodeName;
+        return $this->parentNodeName ?? null;
     }
 
     /**
+     *
+     *
      * @return string
      */
     public function getNodeName()
