@@ -25,6 +25,12 @@ class ReceptorTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new Receptor();
+        $this->node = new Receptor([
+            'Rfc' => 'XEXX010101000',
+            'Nombre' => 'John Doe',
+            'ResidenciaFiscal' => 'USA',
+            'NumRegIdTrib' => '121585958',
+            'UsoCFDI' => 'G03',
+        ]);
     }
 }

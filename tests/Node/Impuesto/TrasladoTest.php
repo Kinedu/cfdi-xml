@@ -28,7 +28,7 @@ class TrasladoTest extends NodeTest
         $this->node = new Traslado();
     }
 
-    public function testParentNodeName()
+    public function testTrasladoParentNodeName()
     {
         $this->assertEquals(
             $this->node->getParentNodeName(),

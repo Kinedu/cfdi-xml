@@ -25,6 +25,10 @@ class EmisorTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new Emisor();
+        $this->node = new Emisor([
+            'Rfc' => 'XAXX010101000',
+            'Nombre' => 'John Doe',
+            'RegimenFiscal' => '601',
+        ]);
     }
 }

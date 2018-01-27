@@ -25,10 +25,17 @@ class ConceptoTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new Concepto();
+        $this->node = new Concepto([
+            'ClaveProdServ' => '60121001',
+            'NoIdentificacion' => 'UT421510',
+            'Cantidad' => '5.555555',
+            'ClaveUnidad' => 'KGM',
+            'Unidad' => 'Kilo',
+            'ValorUnitario' => 'I',
+        ]);
     }
 
-    public function testParentNodeName()
+    public function testConceptoParentNodeName()
     {
         $this->assertEquals(
             $this->node->getParentNodeName(),

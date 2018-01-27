@@ -25,6 +25,8 @@ class InformacionAduaneraTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new InformacionAduanera();
+        $this->node = new InformacionAduanera([
+            'NumeroPedimento' => '10 47 3807 8003832',
+        ]);
     }
 }

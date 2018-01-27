@@ -25,6 +25,12 @@ class ParteTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new Parte();
+        $this->node = new Parte([
+            'ClaveProdServ' => '41116401',
+            'NoIdentificacion' => '7501030283645',
+            'Cantidad' => '10',
+            'Unidad' => 'Piezas',
+            'Descripcion' => 'Martillos de impacto',
+        ]);
     }
 }

@@ -25,6 +25,10 @@ class RelacionadoTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new Relacionado();
+        $this->node = new Relacionado([
+            'UUID' => '5FB2822E-396D-4725-8521-CDC4BDD20CCF',
+        ], [
+            'TipoRelacion' => '01',
+        ]);
     }
 }

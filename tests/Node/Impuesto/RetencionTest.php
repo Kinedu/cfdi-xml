@@ -28,7 +28,7 @@ class RetencionTest extends NodeTest
         $this->node = new Retencion();
     }
 
-    public function testParentNodeName()
+    public function testRetencionParentNodeName()
     {
         $this->assertEquals(
             $this->node->getParentNodeName(),

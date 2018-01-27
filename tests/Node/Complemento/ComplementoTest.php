@@ -28,7 +28,7 @@ class ComplementoTest extends TestCase
         $this->node = new Complemento();
     }
 
-    public function testParentNodeName()
+    public function testComplementoParentNodeName()
     {
         $this->assertEquals(
             $this->node->getParentNodeName(),
