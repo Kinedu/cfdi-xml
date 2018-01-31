@@ -17,7 +17,8 @@
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "kinedu/cfdi-xslt": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
@@ -32,5 +33,15 @@
             "Kinedu\\CfdiXML\\Tests\\": "tests"
         }
     },
+    "scripts": {
+        "downloadXslt": "Kinedu\\CfdiXML\\CFDI::downloadXslt",
+        "post-install-cmd": [
+            "@downloadXslt"
+        ],
+        "post-update-cmd": [
+            "@downloadXslt"
+        ]
+    },
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

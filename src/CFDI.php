@@ -13,6 +13,7 @@ namespace Kinedu\CfdiXML;
 
 use Kinedu\CfdiXML\Node\Comprobante;
 use Kinedu\CfdiXML\Common\Node;
+use Kinedu\CfdiXslt\Retrieve;
 use XSLTProcessor;
 use DOMDocument;
 
@@ -52,5 +53,14 @@ class CFDI
     public function add(Node $node)
     {
         $this->comprobante->add($node);
+    }
+
+    /**
+     * @return void
+     */
+    public static function downloadXslt()
+    {
+        $xslt = new Retrieve();
+        $xslt->download('./xslt/');
     }
 }
