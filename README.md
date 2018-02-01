@@ -13,7 +13,10 @@ composer require kinedu/cfdi-xml
 
 ## Use
 
-- [CFDI](#cfdi)
+- [Factura](#factura)
+    - [CFDI](#cfdi)
+    - [Obtener XML](#obtener-xml)
+    - [Guardar CFDI](#guardar-cfdi)
 - [Nodos](#nodos)
     - [Relacionado](#relacionado)
     - [Emisor](#emisor)
@@ -23,10 +26,19 @@ composer require kinedu/cfdi-xml
     - [Información Aduanera](#información-aduanera)
     - [Timbre Fiscal Digital](#timbre-fiscal-digital)
 
-### CFDI
+### Factura
+
+- [CFDI](#cfdi)
+- [Obtener XML](#obtener-xml)
+- [Guardar CFDI](#guardar-cfdi)
+
+#### CFDI
 
 ```php
 use Kinedu\CfdiXML\CFDI;
+
+$key = 'AAA010101AAA.key.pem';
+$cer = 'AAA010101AAA.cer.pem';
 
 $cfdi = new CFDI([
     'Serie' => 'A',
@@ -41,7 +53,7 @@ $cfdi = new CFDI([
     'TipoDeComprobante' => 'I',
     'MetodoPago' => 'PUE',
     'LugarExpedicion' => '64000',
-]);
+], $key, $cer);
 ```
 
 <details>
@@ -52,6 +64,35 @@ $cfdi = new CFDI([
 ```
 
 </details>
+
+[⬆️ Regresar al listado](#factura)
+
+#### Obtener XML
+```php
+use Kinedu\CfdiXML\CFDI;
+
+$key = 'AAA010101AAA.key.pem';
+$cer = 'AAA010101AAA.cer.pem';
+
+$cfdi = new CFDI([
+    'Serie' => 'A',
+    'Folio' => 'A0103',
+    'Fecha' => '2018-02-01T10:00:00',
+    'FormaPago' => '01',
+    'NoCertificado' => '3000100000300023708',
+    'SubTotal' => '4741.38',
+    'Moneda' => 'MXN',
+    'TipoCambio' => '1',
+    'Total' => '5500.00',
+    'TipoDeComprobante' => 'I',
+    'MetodoPago' => 'PUE',
+    'LugarExpedicion' => '64000',
+], $key, $cer);
+
+$cfdi->getXML();
+```
+
+[⬆️ Regresar al listado](#factura)
 
 ### Nodos
 
@@ -71,7 +112,7 @@ En este nodo se debe expresar la información de los comprobantes fiscales relac
 use Kinedu\CfdiXML\Node\Relacionado;
 use Kinedu\CfdiXML\CFDI;
 
-$cfdi = new CFDI([...]);
+$cfdi = new CFDI(...);
 
 $cfdi->add(new Relacionado([
     'UUID' => '5FB2822E-396D-4725-8521-CDC4BDD20CCF',
@@ -101,7 +142,7 @@ En este nodo se debe expresar la información del contribuyente que emite el com
 use Kinedu\CfdiXML\Node\Emisor;
 use Kinedu\CfdiXML\CFDI;
 
-$cfdi = new CFDI([...]);
+$cfdi = new CFDI(...);
 
 $cfdi->add(new Emisor([
     'Rfc' => 'XAXX010101000',
@@ -129,7 +170,7 @@ En este nodo se debe expresar la información del contribuyente receptor del com
 use Kinedu\CfdiXML\Node\Receptor;
 use Kinedu\CfdiXML\CFDI;
 
-$cfdi = new CFDI([...]);
+$cfdi = new CFDI(...);
 
 $cfdi->add(new Receptor([
     'Rfc' => 'XEXX010101000',
@@ -159,7 +200,7 @@ En este nodo se debe expresar la información detallada de un bien o servicio de
 use Kinedu\CfdiXML\Node\Concepto;
 use Kinedu\CfdiXML\CFDI;
 
-$cfdi = new CFDI([...]);
+$cfdi = new CFDI(...);
 
 $cfdi->add(new Concepto([
     'ClaveProdServ' => '60121001',
@@ -192,7 +233,7 @@ use Kinedu\CfdiXML\Node\Concepto;
 use Kinedu\CfdiXML\Node\Parte;
 use Kinedu\CfdiXML\CFDI;
 
-$cfdi = new CFDI([...]);
+$cfdi = new CFDI(...);
 
 $concepto = new Concepto([
     'ClaveProdServ' => '27113201',
@@ -272,9 +313,9 @@ use Kinedu\CfdiXML\Node\InformacionAduanera;
 use Kinedu\CfdiXML\Node\Concepto;
 use Kinedu\CfdiXML\CFDI;
 
-$cfdi = new CFDI([...]);
+$cfdi = new CFDI(...);
 
-$concepto = new Concepto([...]);
+$concepto = new Concepto(...);
 
 $concepto->add(new InformacionAduanera([
     'NumeroPedimento' => '00 00 0000 0000000',
@@ -299,11 +340,14 @@ $cfdi->add($concepto);
 [⬆️ Regresar al listado](#nodos)
 
 #### Timbre Fiscal Digital
+
+Complemento requerido para el Timbrado Fiscal Digital que da valides a un Comprobante Fiscal Digital.
+
 ```php
 use Kinedu\CfdiXML\Node\Complemento\TimbreFiscalDigital;
 use Kinedu\CfdiXML\CFDI;
 
-$cfdi = new CFDI([...]);
+$cfdi = new CFDI(...);
 
 $cfdi->add(new TimbreFiscalDigital([
     'Version' => '1.1',
