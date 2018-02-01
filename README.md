@@ -35,7 +35,7 @@ $cfdi = new CFDI([
 ```
 
 <details>
-<summary>Resultado</summary>
+<summary>Ver Resultado</summary>
 
 ```xml
 <cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Serie="A" Folio="A0103" Fecha="2018-02-01T10:00:00" FormaPago="01" NoCertificado="3000100000300023708" SubTotal="4741.38" Moneda="MXN" TipoCambio="1" Total="5500.00" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="64000"/>
@@ -43,7 +43,16 @@ $cfdi = new CFDI([
 
 </details>
 
-### Relacionado
+### Nodos
+
+- [Relacionado](#relacionado)
+- [Emisor](#emisor)
+- [Receptor](#receptor)
+- [Concepto](#concepto)
+- [Parte](#parte)
+- [Información Aduanera](#información-aduanera)
+
+#### Relacionado
 
 En este nodo se debe expresar la información de los comprobantes fiscales relacionados con el que se ésta generando, se deben expresar tantos numeros de nodos de CfdiRelacionado, como comprobantes se requieran relacionar.
 
@@ -61,7 +70,7 @@ $cfdi->add(new Relacionado([
 ```
 
 <details>
-<summary>Resultado</summary>
+<summary>Ver Resultado</summary>
 
 ```xml
 <cfdi:CfdiRelacionados TipoRelacion="01">
@@ -71,7 +80,9 @@ $cfdi->add(new Relacionado([
 
 </details>
 
-### Emisor
+[⬆️ Regresar al listado](#nodos)
+
+#### Emisor
 
 En este nodo se debe expresar la información del contribuyente que emite el comprobante fiscal.
 
@@ -89,7 +100,7 @@ $cfdi->add(new Emisor([
 ```
 
 <details>
-<summary>Resultado</summary>
+<summary>Ver Resultado</summary>
 
 ```xml
 <cfdi:Emisor Rfc="XAXX010101000" Nombre="John Doe" RegimenFiscal="601"/>
@@ -97,7 +108,9 @@ $cfdi->add(new Emisor([
 
 </details>
 
-### Receptor
+[⬆️ Regresar al listado](#nodos)
+
+#### Receptor
 
 En este nodo se debe expresar la información del contribuyente receptor del comprobante.
 
@@ -117,7 +130,7 @@ $cfdi->add(new Receptor([
 ```
 
 <details>
-<summary>Resultado</summary>
+<summary>Ver Resultado</summary>
 
 ```xml
 <cfdi:Receptor Rfc="XEXX010101000" Nombre="John Doe" ResidenciaFiscal="USA" NumRegIdTrib="121585958" UsoCFDI="G03"/>
@@ -125,7 +138,9 @@ $cfdi->add(new Receptor([
 
 </details>
 
-### Concepto
+[⬆️ Regresar al listado](#nodos)
+
+#### Concepto
 
 En este nodo se debe expresar la información detallada de un bien o servicio descrito en el comprobante.
 
@@ -146,7 +161,7 @@ $cfdi->add(new Concepto([
 ```
 
 <details>
-<summary>Resultado</summary>
+<summary>Ver Resultado</summary>
 
 ```xml
 <cfdi:Conceptos>
@@ -156,7 +171,9 @@ $cfdi->add(new Concepto([
 
 </details>
 
-### Parte
+[⬆️ Regresar al listado](#nodos)
+
+#### Parte
 En este nodo se pueden expresar las partes o componentes que integran la totalidad del concepto expresado en el comprobante fiscal digital por Internet.
 
 ```php
@@ -219,7 +236,7 @@ $cfdi->add($concepto);
 ```
 
 <details>
-<summary>Resultado</summary>
+<summary>Ver Resultado</summary>
 
 ```xml
 <cfdi:Conceptos>
@@ -233,7 +250,9 @@ $cfdi->add($concepto);
 
 </details>
 
-### Información Aduanera
+[⬆️ Regresar al listado](#nodos)
+
+#### Información Aduanera
 
 En este nodo se debe expresar la información aduanera correspondiente a cada concepto cuando se trate de ventas de primera mano de mercancías importadas.
 
@@ -254,7 +273,7 @@ $cfdi->add($concepto);
 ```
 
 <details>
-<summary>Resultado</summary>
+<summary>Ver Resultado</summary>
 
 ```xml
 <cfdi:Conceptos>
@@ -265,6 +284,8 @@ $cfdi->add($concepto);
 ```
 
 </details>
+
+[⬆️ Regresar al listado](#nodos)
 
 ## License
 
