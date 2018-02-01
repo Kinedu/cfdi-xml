@@ -19,4 +19,30 @@ class TimbreFiscalDigital extends Complemento
      * @var string
      */
     protected $nodeName = 'tfd:TimbreFiscalDigital';
+
+    /**
+     * Create a new timbre fiscal digital instance.
+     *
+     * @param array $data
+     */
+    public function __construct($data)
+    {
+        $data = array_merge($this->attributes(), $data);
+
+        parent::__construct($data);
+    }
+
+    /**
+     *
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            'xmlns:tfd' => 'http://www.sat.gob.mx/TimbreFiscalDigital',
+            'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
+            'xsi:schemaLocation' => 'http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd',
+        ];
+    }
 }

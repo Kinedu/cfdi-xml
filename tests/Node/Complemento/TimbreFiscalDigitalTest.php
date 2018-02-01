@@ -25,6 +25,11 @@ class TimbreFiscalDigitalTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new TimbreFiscalDigital();
+        $this->node = new TimbreFiscalDigital([
+            'Version' => '1.1',
+            'UUID' => '1968FDDE-077E-11E8-BA89-0ED5F89F718B',
+            'FechaTimbrado' => '2018-02-01T12:30:00',
+            'RfcProvCertif' => 'XEXX010101000',
+        ]);
     }
 }

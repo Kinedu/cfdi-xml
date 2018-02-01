@@ -13,6 +13,16 @@ composer require kinedu/cfdi-xml
 
 ## Use
 
+- [CFDI](#cfdi)
+- [Nodos](#nodos)
+    - [Relacionado](#relacionado)
+    - [Emisor](#emisor)
+    - [Receptor](#receptor)
+    - [Concepto](#concepto)
+    - [Parte](#parte)
+    - [Información Aduanera](#información-aduanera)
+    - [Timbre Fiscal Digital](#timbre-fiscal-digital)
+
 ### CFDI
 
 ```php
@@ -51,6 +61,7 @@ $cfdi = new CFDI([
 - [Concepto](#concepto)
 - [Parte](#parte)
 - [Información Aduanera](#información-aduanera)
+- [Timbre Fiscal Digital](#timbre-fiscal-digital)
 
 #### Relacionado
 
@@ -281,6 +292,34 @@ $cfdi->add($concepto);
         <cfdi:InformacionAduanera NumeroPedimento="00 00 0000 0000000"/>
     </cfdi:Concepto>
 </cfdi:Conceptos>
+```
+
+</details>
+
+[⬆️ Regresar al listado](#nodos)
+
+#### Timbre Fiscal Digital
+```php
+use Kinedu\CfdiXML\Node\Complemento\TimbreFiscalDigital;
+use Kinedu\CfdiXML\CFDI;
+
+$cfdi = new CFDI([...]);
+
+$cfdi->add(new TimbreFiscalDigital([
+    'Version' => '1.1',
+    'UUID' => '1968FDDE-077E-11E8-BA89-0ED5F89F718B',
+    'FechaTimbrado' => '2018-02-01T12:30:00',
+    'RfcProvCertif' => 'XEXX010101000',
+]));
+```
+
+<details>
+<summary>Ver Resultado</summary>
+
+```xml
+<cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="1968FDDE-077E-11E8-BA89-0ED5F89F718B" FechaTimbrado="2018-02-01T12:30:00" RfcProvCertif="XEXX010101000"/>
+</cfdi:Complemento>
 ```
 
 </details>
