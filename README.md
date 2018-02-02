@@ -68,6 +68,7 @@ $cfdi = new CFDI([
 [⬆️ Regresar al listado](#factura)
 
 #### Obtener XML
+
 ```php
 use Kinedu\CfdiXML\CFDI;
 
@@ -93,6 +94,32 @@ $cfdi->getXML();
 ```
 
 [⬆️ Regresar al listado](#factura)
+
+#### Guardar CFDI
+
+```php
+use Kinedu\CfdiXML\CFDI;
+
+$key = 'AAA010101AAA.key.pem';
+$cer = 'AAA010101AAA.cer.pem';
+
+$cfdi = new CFDI([
+    'Serie' => 'A',
+    'Folio' => 'A0103',
+    'Fecha' => '2018-02-01T10:00:00',
+    'FormaPago' => '01',
+    'NoCertificado' => '3000100000300023708',
+    'SubTotal' => '4741.38',
+    'Moneda' => 'MXN',
+    'TipoCambio' => '1',
+    'Total' => '5500.00',
+    'TipoDeComprobante' => 'I',
+    'MetodoPago' => 'PUE',
+    'LugarExpedicion' => '64000',
+], $key, $cer);
+
+$cfdi->save('./A0103.xml');
+```
 
 ### Nodos
 

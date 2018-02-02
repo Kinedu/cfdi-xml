@@ -175,4 +175,12 @@ class CFDI
     {
         return $this->xml()->saveXML();
     }
+
+    /**
+     * @param string $filename
+     */
+    public function save(string $filename)
+    {
+        return $this->xml()->save($filename);
+    }
 }
