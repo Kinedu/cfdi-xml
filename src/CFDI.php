@@ -159,7 +159,7 @@ class CFDI
      *
      * @return DOMDocument
      */
-    protected function xml(): DOMDocument
+    protected function xml() : DOMDocument
     {
         $this->putSello();
         $this->putCertificado();
