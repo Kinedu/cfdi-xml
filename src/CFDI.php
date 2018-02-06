@@ -91,7 +91,7 @@ class CFDI
         $xsl->load(static::XSL_ENDPOINT);
 
         $xslt = new XSLTProcessor();
-        $xslt->importStyleSheet($xsl);
+        @$xslt->importStyleSheet($xsl);
 
         $xml = new DOMDocument();
         $xml->loadXML($this->comprobante->getDocument()->saveXML());
@@ -104,7 +104,7 @@ class CFDI
      *
      * @return string
      */
-    protected function getSello() : string
+    public function getSello() : string
     {
         $pkey = openssl_get_privatekey($this->key);
         openssl_sign(@$this->getCadenaOriginal(), $signature, $pkey, OPENSSL_ALGO_SHA256);
@@ -132,7 +132,7 @@ class CFDI
      *
      * @return string
      */
-    protected function getCertificado() : string
+    public function getCertificado() : string
     {
         $cer = preg_replace('/(-+[^-]+-+)/', '', $this->cer);
         $cer = preg_replace('/\s+/', '', $cer);
