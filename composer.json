@@ -1,12 +1,13 @@
 {
     "name": "kinedu/cfdi-xml",
-    "description": "",
+    "description": "Librería para generar la estructura XML de los Comprobantes Fiscales (CFDI)",
     "homepage": "https://github.com/Kinedu/cfdi-xml",
     "type": "library",
     "license": "MIT",
     "keywords": [
         "Kinedu",
-        "cfdi"
+        "cfdi",
+        "sat"
     ],
     "authors": [
         {
