@@ -6,13 +6,15 @@
 [![Total Downloads](https://poser.pugx.org/kinedu/cfdi-xml/downloads?format=flat-square)](https://packagist.org/packages/kinedu/cfdi-xml)
 [![License](https://img.shields.io/github/license/kinedu/cfdi-xml.svg?style=flat-square)](https://packagist.org/packages/kinedu/cfdi-xml)
 
-## Installation
+## Instalación
+
+Instalar el paquete mediante [Composer](https://getcomposer.org/).
 
 ```shell
 composer require kinedu/cfdi-xml
 ```
 
-## Use
+## Uso
 
 - [Factura](#factura)
     - [CFDI](#cfdi)
@@ -398,6 +400,6 @@ $cfdi->add(new TimbreFiscalDigital([
 
 [⬆️ Regresar al listado](#nodos)
 
-## License
+## Licencia
 
-CFDI XML is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+CFDI XML esta bajo la Licencia MIT, si quieres saber más al respecto puedes ver el archivo de [Licencia](LICENSE) que se encuentra en este mismo repositorio.
