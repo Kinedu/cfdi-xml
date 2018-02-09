@@ -38,7 +38,7 @@
         "download-xslt": [
             "\\Kinedu\\CfdiXML\\XSLT::download"
         ],
-        "post-root-package-install": [
+        "post-root-package-install": [
             "@download-xslt"
         ]
     },
