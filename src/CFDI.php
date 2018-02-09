@@ -88,7 +88,7 @@ class CFDI
     public function getCadenaOriginal() : string
     {
         $xsl = new DOMDocument();
-        $xsl->load(static::XSL_ENDPOINT);
+        $xsl->load($this->getXSL());
 
         $xslt = new XSLTProcessor();
         @$xslt->importStyleSheet($xsl);
@@ -182,5 +182,19 @@ class CFDI
     public function save(string $filename)
     {
         return $this->xml()->save($filename);
+    }
+
+    /**
+     * @return string
+     */
+    public function getXSL()
+    {
+        $file = './xslt/cadenaoriginal_3_3.xslt';
+
+        if (file_exists($file)) {
+            return $file;
+        }
+
+        return static::XSL_ENDPOINT;
     }
 }
