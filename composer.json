@@ -37,9 +37,6 @@
     "scripts": {
         "download-xslt": [
             "\\Kinedu\\CfdiXML\\XSLT::download"
-        ],
-        "post-root-package-install": [
-            "@download-xslt"
         ]
     },
     "minimum-stability": "dev",
