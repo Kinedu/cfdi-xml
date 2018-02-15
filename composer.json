@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "kinedu/cfdi-xslt": "dev-master"
+        "kinedu/cfdi-xslt": "^0.1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"

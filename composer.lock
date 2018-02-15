@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fe9485d305690cf1fab97bfa1d7d019",
+    "content-hash": "373ccdfb4d29d8b068eaafa36873f496",
     "packages": [
         {
             "name": "kinedu/cfdi-xslt",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kinedu/cfdi-xslt.git",
-                "reference": "4c33c6f513dffc017f9ed2d545712ea2935b50c1"
+                "reference": "9bd2ff8af2efd641fab75c52422c09f7bd02bb0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kinedu/cfdi-xslt/zipball/4c33c6f513dffc017f9ed2d545712ea2935b50c1",
-                "reference": "4c33c6f513dffc017f9ed2d545712ea2935b50c1",
+                "url": "https://api.github.com/repos/Kinedu/cfdi-xslt/zipball/9bd2ff8af2efd641fab75c52422c09f7bd02bb0a",
+                "reference": "9bd2ff8af2efd641fab75c52422c09f7bd02bb0a",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
                 "cfdi",
                 "sat"
             ],
-            "time": "2018-02-08T22:47:06+00:00"
+            "time": "2018-02-09T22:21:20+00:00"
         }
     ],
     "packages-dev": [
@@ -1515,9 +1515,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "kinedu/cfdi-xslt": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
