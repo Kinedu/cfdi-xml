@@ -106,7 +106,7 @@ class Node
         }
 
         if ($parentName = $node->getParentNodeName()) {
-            $currentElement = ($wrapperElement) ? $wrapperElement : $this->element ;
+            $currentElement = ($wrapperElement) ? $wrapperElement : $this->element;
 
             $parentNode = $this->getDirectChildElementByName(
                 $currentElement->childNodes,
