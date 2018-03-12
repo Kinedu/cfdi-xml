@@ -101,8 +101,9 @@ class Node
             if (!$wrapperElement) {
                 $wrapperElement = $this->document->createElement($wrapperName);
                 $this->element->appendChild($wrapperElement);
-                $this->setAttr($wrapperElement, $node->getAttr('wrapper'));
             }
+
+            $this->setAttr($wrapperElement, $node->getAttr('wrapper'));
         }
 
         if ($parentName = $node->getParentNodeName()) {
