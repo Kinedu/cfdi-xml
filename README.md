@@ -24,6 +24,7 @@ composer require kinedu/cfdi-xml
     - [Relacionado](#relacionado)
     - [Emisor](#emisor)
     - [Receptor](#receptor)
+    - [Impuestos](#impuestos)
     - [Concepto](#concepto)
     - [Parte](#parte)
     - [Información Aduanera](#información-aduanera)
@@ -129,6 +130,7 @@ $cfdi->save('./A0103.xml');
 - [Relacionado](#relacionado)
 - [Emisor](#emisor)
 - [Receptor](#receptor)
+- [Impuestos](#impuestos)
 - [Concepto](#concepto)
 - [Parte](#parte)
 - [Información Aduanera](#información-aduanera)
@@ -222,6 +224,146 @@ $cfdi->add(new Receptor([
 
 [⬆️ Regresar al listado](#nodos)
 
+#### Impuestos
+
+##### Traslado
+
+###### Traslado en comprobante
+
+```php
+use Kinedu\CFDI\Node\Impuesto\Traslado;
+use Kinedu\CfdiXML\CFDI;
+
+$cfdi = new CFDI([...]);
+
+$cfdi->add(new Traslado([
+    'Impuesto' => '002',
+    'TipoFactor' => 'Tasa',
+    'TasaOCuota' => '0.160000',
+    'Importe' => '4500',
+], [], [
+    'TotalImpuestosTrasladados' => '4500',
+]));
+```
+
+<details>
+<summary>Ver Resultado</summary>
+
+```xml
+<cfdi:Impuestos TotalImpuestosTrasladados="4500">
+    <cfdi:Traslados>
+        <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="4500"/>
+    </cfdi:Traslados>
+</cfdi:Impuestos>
+```
+
+</details>
+
+###### Traslado en concepto
+
+```php
+use Kinedu\CFDI\Node\Impuesto\Traslado;
+use Kinedu\CfdiXML\Node\Concepto;
+use Kinedu\CfdiXML\CFDI;
+
+$cfdi = new CFDI([...]);
+
+$concepto = new Concepto([...]);
+
+$concepto->add(new Traslado([
+    'Base' => '4500',
+    'Impuesto' => '002',
+    'TipoFactor' => 'Tasa',
+    'TasaOCuota' => '0.160000',
+    'Importe' => '720',
+]));
+```
+
+<details>
+<summary>Ver Resultado</summary>
+
+```xml
+<cfdi:Conceptos>
+    <cfdi:Concepto>
+        <cfdi:Impuestos>
+            <cfdi:Traslados>
+                <cfdi:Traslado Base="4500" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="720"/>
+            </cfdi:Traslados>
+        </cfdi:Impuestos>
+    </cfdi:Concepto>
+</cfdi:Conceptos>
+```
+
+</details>
+
+##### Retención
+
+###### Retención en comprobante
+
+```php
+use Kinedu\CFDI\Node\Impuesto\Retencion;
+use Kinedu\CfdiXML\CFDI;
+
+$cfdi = new CFDI([...]);
+
+$cfdi->add(new Retencion([
+    'Impuesto' => '002',
+    'Importe' => '4500',
+], [], [
+    'TotalImpuestosRetenidos' => '4500',
+]));
+```
+
+<details>
+<summary>Ver Resultado</summary>
+
+```xml
+<cfdi:Impuestos TotalImpuestosRetenidos="4500">
+    <cfdi:Retenciones>
+        <cfdi:Retencion Impuesto="002" Importe="4500"/>
+    </cfdi:Retenciones>
+</cfdi:Impuestos>
+```
+
+</details>
+
+###### Retención en concepto
+
+```php
+use Kinedu\CFDI\Node\Impuesto\Retencion;
+use Kinedu\CfdiXML\Node\Concepto;
+use Kinedu\CfdiXML\CFDI;
+
+$cfdi = new CFDI([...]);
+
+$concepto = new Concepto([...]);
+
+$concepto->add(new Retencion([
+    'Base' => '4500',
+    'Impuesto' => '003',
+    'TipoFactor' => 'Tasa',
+    'TasaOCuota' => '0.530000',
+    'Importe' => '2385',
+]));
+```
+
+<details>
+<summary>Ver Resultado</summary>
+
+```xml
+<cfdi:Conceptos>
+    <cfdi:Concepto>
+        <cfdi:Impuestos>
+            <cfdi:Retenciones>
+                <cfdi:Retencion Base="4500" Impuesto="003" TipoFactor="Tasa" TasaOCuota="0.530000" Importe="2385"/>
+            </cfdi:Retenciones>
+        </cfdi:Impuestos>
+    </cfdi:Concepto>
+</cfdi:Conceptos>
+```
+
+</details>
+
 #### Concepto
 
 En este nodo se debe expresar la información detallada de un bien o servicio descrito en el comprobante.
@@ -233,12 +375,15 @@ use Kinedu\CfdiXML\CFDI;
 $cfdi = new CFDI(...);
 
 $cfdi->add(new Concepto([
-    'ClaveProdServ' => '60121001',
-    'NoIdentificacion' => 'UT421510',
-    'Cantidad' => '5.555555',
-    'ClaveUnidad' => 'KGM',
-    'Unidad' => 'Kilo',
-    'ValorUnitario' => 'I',
+    'ClaveProdServ' => '10317331',
+    'NoIdentificacion' => 'UT421511',
+    'Cantidad' => '24',
+    'ClaveUnidad' => 'H87',
+    'Unidad' => 'Pieza',
+    'Descripcion' => 'Arreglo de 24 tulipanes rosadas recién cortados',
+    'ValorUnitario' => '56.00',
+    'Importe' => '1344.00',
+    'Descuento' => '10.00',
 ]));
 ```
 
