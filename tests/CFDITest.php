@@ -43,8 +43,8 @@ class CFDITest extends TestCase
 
     protected function createCFDI()
     {
-        $key = './tests/CSD/CSD01_AAA010101AAA.key.pem';
-        $cer = './tests/CSD/CSD01_AAA010101AAA.cer.pem';
+        $key = file_get_contents('./tests/CSD/CSD01_AAA010101AAA.key.pem');
+        $cer = file_get_contents('./tests/CSD/CSD01_AAA010101AAA.cer.pem');
 
         return new CFDI([
             'Serie' => 'A',
