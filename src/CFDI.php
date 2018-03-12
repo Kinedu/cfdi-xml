@@ -64,8 +64,8 @@ class CFDI
     {
         $this->comprobante = new Comprobante($data, $this->version);
 
-        $this->key = file_get_contents($key);
-        $this->cer = file_get_contents($cer);
+        $this->key = $key;
+        $this->cer = $cer;
     }
 
     /**

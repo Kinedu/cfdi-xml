@@ -76,8 +76,8 @@ $cfdi = new CFDI([
 ```php
 use Kinedu\CfdiXML\CFDI;
 
-$key = 'AAA010101AAA.key.pem';
-$cer = 'AAA010101AAA.cer.pem';
+$key = file_get_contents('AAA010101AAA.key.pem');
+$cer = file_get_contents('AAA010101AAA.cer.pem');
 
 $cfdi = new CFDI([
     'Serie' => 'A',
