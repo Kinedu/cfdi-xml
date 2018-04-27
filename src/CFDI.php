@@ -85,7 +85,7 @@ class CFDI
      *
      * @return string
      */
-    public function getCadenaOriginal() : string
+    public function getCadenaOriginal(): string
     {
         $xsl = new DOMDocument();
         $xsl->load($this->getXSL());
@@ -104,7 +104,7 @@ class CFDI
      *
      * @return string
      */
-    public function getSello() : string
+    public function getSello(): string
     {
         $pkey = openssl_get_privatekey($this->key);
         openssl_sign(@$this->getCadenaOriginal(), $signature, $pkey, OPENSSL_ALGO_SHA256);
@@ -132,7 +132,7 @@ class CFDI
      *
      * @return string
      */
-    public function getCertificado() : string
+    public function getCertificado(): string
     {
         $cer = preg_replace('/(-+[^-]+-+)/', '', $this->cer);
         $cer = preg_replace('/\s+/', '', $cer);
@@ -159,7 +159,7 @@ class CFDI
      *
      * @return DOMDocument
      */
-    protected function xml() : DOMDocument
+    protected function xml(): DOMDocument
     {
         $this->putSello();
         $this->putCertificado();
@@ -171,7 +171,7 @@ class CFDI
      *
      * @return string
      */
-    public function getXML() : string
+    public function getXML(): string
     {
         return $this->xml()->saveXML();
     }

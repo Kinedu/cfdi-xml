@@ -48,7 +48,7 @@ class Comprobante extends Node
      *
      * @return array
      */
-    public function attributes() : array
+    public function attributes(): array
     {
         return [
             'xmlns:cfdi' => 'http://www.sat.gob.mx/cfd/3',
