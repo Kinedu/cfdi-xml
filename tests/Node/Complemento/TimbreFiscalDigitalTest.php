@@ -17,6 +17,13 @@ use Kinedu\CfdiXML\Node\Complemento\TimbreFiscalDigital;
 class TimbreFiscalDigitalTest extends NodeTest
 {
     /**
+     * The parent node name.
+     *
+     * @var string
+     */
+    protected $parentNodeName = 'cfdi:Complemento';
+
+    /**
      * The node name.
      *
      * @var string

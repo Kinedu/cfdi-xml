@@ -21,6 +21,13 @@ class RelacionadoTest extends NodeTest
      *
      * @var string
      */
+    protected $parentNodeName = 'cfdi:CfdiRelacionados';
+
+    /**
+     * The node name.
+     *
+     * @var string
+     */
     protected $nodeName = 'cfdi:CfdiRelacionado';
 
     public function setUp()

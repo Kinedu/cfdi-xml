@@ -36,4 +36,12 @@ abstract class NodeTest extends TestCase
             $this->nodeName
         );
     }
+
+    public function testParentNodeName()
+    {
+        $this->assertEquals(
+            $this->node->getParentNodeName(),
+            $this->parentNodeName
+        );
+    }
 }

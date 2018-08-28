@@ -17,6 +17,13 @@ use Kinedu\CfdiXML\Node\Impuesto\Retencion;
 class RetencionTest extends NodeTest
 {
     /**
+     * The parent node name.
+     *
+     * @var string
+     */
+    protected $parentNodeName = 'cfdi:Retenciones';
+
+    /**
      * The node name.
      *
      * @var string
