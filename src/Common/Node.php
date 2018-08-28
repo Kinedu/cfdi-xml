@@ -11,8 +11,8 @@
 
 namespace Kinedu\CfdiXML\Common;
 
-use DOMDocument;
 use DOMElement;
+use DOMDocument;
 use DOMNodeList;
 
 class Node
