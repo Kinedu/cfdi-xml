@@ -41,7 +41,7 @@ abstract class NodeTest extends TestCase
     {
         $this->assertEquals(
             $this->node->getParentNodeName(),
-            $this->parentNodeName
+            ($this->parentNodeName ?? null)
         );
     }
 }
