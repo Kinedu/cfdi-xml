@@ -38,4 +38,11 @@ class RelacionadoTest extends NodeTest
             'TipoRelacion' => '01',
         ]);
     }
+
+    public function testValidAttributes()
+    {
+        $this->assertArraySubset($this->node->getValidAttributes(), [
+            'UUID',
+        ]);
+    }
 }

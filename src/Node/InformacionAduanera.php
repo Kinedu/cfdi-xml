@@ -21,4 +21,13 @@ class InformacionAduanera extends Node
      * @var string
      */
     protected $nodeName = 'cfdi:InformacionAduanera';
+
+    /**
+     * Node valid attributes.
+     *
+     * @var array
+     */
+    protected $validAttributes = [
+        'NumeroPedimento',
+    ];
 }

@@ -28,4 +28,13 @@ class Relacionado extends Node
      * @var string
      */
     protected $nodeName = 'cfdi:CfdiRelacionado';
+
+    /**
+     * Node valid attributes.
+     *
+     * @var array
+     */
+    protected $validAttributes = [
+        'UUID',
+    ];
 }

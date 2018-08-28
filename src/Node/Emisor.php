@@ -21,4 +21,15 @@ class Emisor extends Node
      * @var string
      */
     protected $nodeName = 'cfdi:Emisor';
+
+    /**
+     * Node valid attributes.
+     *
+     * @var array
+     */
+    protected $validAttributes = [
+        'Rfc',
+        'Nombre',
+        'RegimenFiscal',
+    ];
 }

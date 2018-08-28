@@ -21,4 +21,19 @@ class Parte extends Node
      * @var string
      */
     protected $nodeName = 'cfdi:Parte';
+
+    /**
+     * Node valid attributes.
+     *
+     * @var array
+     */
+    protected $validAttributes = [
+        'ClaveProdServ',
+        'NoIdentificacion',
+        'Cantidad',
+        'Unidad',
+        'Descripcion',
+        'ValorUnitario',
+        'Importe',
+    ];
 }

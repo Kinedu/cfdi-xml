@@ -21,4 +21,17 @@ class Receptor extends Node
      * @var string
      */
     protected $nodeName = 'cfdi:Receptor';
+
+    /**
+     * Node valid attributes.
+     *
+     * @var array
+     */
+    protected $validAttributes = [
+        'Rfc',
+        'Nombre',
+        'ResidenciaFiscal',
+        'NumRegIdTrib',
+        'UsoCFDI',
+    ];
 }

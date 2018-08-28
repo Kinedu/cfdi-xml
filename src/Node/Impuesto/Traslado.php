@@ -26,4 +26,17 @@ class Traslado extends Impuesto
      * @var string
      */
     protected $nodeName = 'cfdi:Traslado';
+
+    /**
+     * Node valid attributes.
+     *
+     * @var array
+     */
+    protected $validAttributes = [
+        'Base',
+        'Impuesto',
+        'TipoFactor',
+        'TasaOCuota',
+        'Importe',
+    ];
 }

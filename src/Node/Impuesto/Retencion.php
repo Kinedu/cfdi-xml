@@ -26,4 +26,17 @@ class Retencion extends Impuesto
      * @var string
      */
     protected $nodeName = 'cfdi:Retencion';
+
+    /**
+     * Node valid attributes.
+     *
+     * @var array
+     */
+    protected $validAttributes = [
+        'Base',
+        'Impuesto',
+        'TipoFactor',
+        'TasaOCuota',
+        'Importe',
+    ];
 }
