@@ -14,7 +14,7 @@ namespace Kinedu\CfdiXML\Tests\Node\Complemento;
 use PHPUnit\Framework\TestCase;
 use Kinedu\CfdiXML\Node\Complemento\Complemento;
 
-class ComplementoTest extends TestCase
+abstract class ComplementoTest extends TestCase
 {
     /**
      * The node name.
@@ -26,13 +26,5 @@ class ComplementoTest extends TestCase
     public function setUp()
     {
         $this->node = new Complemento();
-    }
-
-    public function testComplementoParentNodeName()
-    {
-        $this->assertEquals(
-            $this->node->getParentNodeName(),
-            'cfdi:Complemento'
-        );
     }
 }

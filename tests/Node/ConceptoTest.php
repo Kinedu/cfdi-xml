@@ -65,12 +65,4 @@ class ConceptoTest extends NodeTest
             'Confirmacion',
         ]);
     }
-
-    public function testConceptoParentNodeName()
-    {
-        $this->assertEquals(
-            $this->node->getParentNodeName(),
-            'cfdi:Conceptos'
-        );
-    }
 }
