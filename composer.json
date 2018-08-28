@@ -22,7 +22,8 @@
         "kinedu/cfdi-xslt": "^0.1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.5"
+        "phpunit/phpunit": "^6.5",
+        "codedungeon/phpunit-result-printer": "^0.19.13"
     },
     "autoload": {
         "psr-4": {
