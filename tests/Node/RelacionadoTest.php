@@ -11,8 +11,8 @@
 
 namespace Kinedu\CfdiXML\Tests\Node;
 
-use Kinedu\CfdiXML\Tests\Common\NodeTest;
 use Kinedu\CfdiXML\Node\Relacionado;
+use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class RelacionadoTest extends NodeTest
 {

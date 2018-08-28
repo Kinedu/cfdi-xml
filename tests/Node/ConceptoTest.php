@@ -11,8 +11,8 @@
 
 namespace Kinedu\CfdiXML\Tests\Node;
 
-use Kinedu\CfdiXML\Tests\Common\NodeTest;
 use Kinedu\CfdiXML\Node\Concepto;
+use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class ConceptoTest extends NodeTest
 {

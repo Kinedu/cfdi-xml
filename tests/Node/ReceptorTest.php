@@ -11,8 +11,8 @@
 
 namespace Kinedu\CfdiXML\Tests\Node;
 
-use Kinedu\CfdiXML\Tests\Common\NodeTest;
 use Kinedu\CfdiXML\Node\Receptor;
+use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class ReceptorTest extends NodeTest
 {

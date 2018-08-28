@@ -11,9 +11,9 @@
 
 namespace Kinedu\CfdiXML\Tests;
 
-use PHPUnit\Framework\TestCase;
-use Kinedu\CfdiXML\Node\Emisor;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Emisor;
+use PHPUnit\Framework\TestCase;
 
 class CFDITest extends TestCase
 {

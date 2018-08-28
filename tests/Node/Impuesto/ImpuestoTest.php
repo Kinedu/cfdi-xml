@@ -11,8 +11,8 @@
 
 namespace Kinedu\CfdiXML\Tests\Node\Impuesto;
 
-use Kinedu\CfdiXML\Node\Impuesto\Impuesto;
 use PHPUnit\Framework\TestCase;
+use Kinedu\CfdiXML\Node\Impuesto\Impuesto;
 
 class ImpuestoTest extends TestCase
 {
