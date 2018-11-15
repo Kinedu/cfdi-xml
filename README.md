@@ -141,8 +141,8 @@ $cfdi->save('./A0103.xml');
 En este nodo se debe expresar la información de los comprobantes fiscales relacionados con el que se ésta generando, se deben expresar tantos numeros de nodos de CfdiRelacionado, como comprobantes se requieran relacionar.
 
 ```php
-use Kinedu\CfdiXML\Node\Relacionado;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Relacionado;
 
 $cfdi = new CFDI(...);
 
@@ -171,8 +171,8 @@ $cfdi->add(new Relacionado([
 En este nodo se debe expresar la información del contribuyente que emite el comprobante fiscal.
 
 ```php
-use Kinedu\CfdiXML\Node\Emisor;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Emisor;
 
 $cfdi = new CFDI(...);
 
@@ -199,8 +199,8 @@ $cfdi->add(new Emisor([
 En este nodo se debe expresar la información del contribuyente receptor del comprobante.
 
 ```php
-use Kinedu\CfdiXML\Node\Receptor;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Receptor;
 
 $cfdi = new CFDI(...);
 
@@ -231,8 +231,8 @@ $cfdi->add(new Receptor([
 ###### Traslado en comprobante
 
 ```php
-use Kinedu\CFDI\Node\Impuesto\Traslado;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CFDI\Node\Impuesto\Traslado;
 
 $cfdi = new CFDI([...]);
 
@@ -262,9 +262,9 @@ $cfdi->add(new Traslado([
 ###### Traslado en concepto
 
 ```php
-use Kinedu\CFDI\Node\Impuesto\Traslado;
-use Kinedu\CfdiXML\Node\Concepto;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Concepto;
+use Kinedu\CFDI\Node\Impuesto\Traslado;
 
 $cfdi = new CFDI([...]);
 
@@ -301,8 +301,8 @@ $concepto->add(new Traslado([
 ###### Retención en comprobante
 
 ```php
-use Kinedu\CFDI\Node\Impuesto\Retencion;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CFDI\Node\Impuesto\Retencion;
 
 $cfdi = new CFDI([...]);
 
@@ -330,9 +330,9 @@ $cfdi->add(new Retencion([
 ###### Retención en concepto
 
 ```php
-use Kinedu\CFDI\Node\Impuesto\Retencion;
-use Kinedu\CfdiXML\Node\Concepto;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Concepto;
+use Kinedu\CFDI\Node\Impuesto\Retencion;
 
 $cfdi = new CFDI([...]);
 
@@ -369,8 +369,8 @@ $concepto->add(new Retencion([
 En este nodo se debe expresar la información detallada de un bien o servicio descrito en el comprobante.
 
 ```php
-use Kinedu\CfdiXML\Node\Concepto;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Concepto;
 
 $cfdi = new CFDI(...);
 
@@ -404,9 +404,9 @@ $cfdi->add(new Concepto([
 En este nodo se pueden expresar las partes o componentes que integran la totalidad del concepto expresado en el comprobante fiscal digital por Internet.
 
 ```php
-use Kinedu\CfdiXML\Node\Concepto;
-use Kinedu\CfdiXML\Node\Parte;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Parte;
+use Kinedu\CfdiXML\Node\Concepto;
 
 $cfdi = new CFDI(...);
 
@@ -484,9 +484,9 @@ $cfdi->add($concepto);
 En este nodo se debe expresar la información aduanera correspondiente a cada concepto cuando se trate de ventas de primera mano de mercancías importadas.
 
 ```php
-use Kinedu\CfdiXML\Node\InformacionAduanera;
-use Kinedu\CfdiXML\Node\Concepto;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Concepto;
+use Kinedu\CfdiXML\Node\InformacionAduanera;
 
 $cfdi = new CFDI(...);
 
@@ -519,8 +519,8 @@ $cfdi->add($concepto);
 Complemento requerido para el Timbrado Fiscal Digital que da valides a un Comprobante Fiscal Digital.
 
 ```php
-use Kinedu\CfdiXML\Node\Complemento\TimbreFiscalDigital;
 use Kinedu\CfdiXML\CFDI;
+use Kinedu\CfdiXML\Node\Complemento\TimbreFiscalDigital;
 
 $cfdi = new CFDI(...);
 
