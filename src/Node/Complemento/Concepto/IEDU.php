@@ -11,6 +11,8 @@
 
 namespace Kinedu\CfdiXML\Node\Complemento\Concepto;
 
+use Kinedu\CfdiXML\Node\Complemento\ComplementoConcepto;
+
 class IEDU extends ComplementoConcepto
 {
     /**
