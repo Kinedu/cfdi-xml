@@ -30,31 +30,6 @@ class Comprobante extends Node
     protected $nodeName = 'cfdi:Comprobante';
 
     /**
-     * Node valid attributes.
-     *
-     * @var array
-     */
-    protected $validAttributes = [
-        'Version',
-        'Serie',
-        'Folio',
-        'Fecha',
-        'Sello',
-        'FormaPago',
-        'NoCertificado',
-        'Certificado',
-        'CondicionesDePago',
-        'SubTotal',
-        'Descuento',
-        'Moneda',
-        'TipoCambio',
-        'Total',
-        'TipoDeComprobante',
-        'LugarExpedicion',
-        'Confirmacion',
-    ];
-
-    /**
      * Create a new comprobante instance.
      *
      * @param array $data

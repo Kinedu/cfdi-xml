@@ -33,17 +33,4 @@ class ParteTest extends NodeTest
             'Descripcion' => 'Martillos de impacto',
         ]);
     }
-
-    public function testValidAttributes()
-    {
-        $this->assertArraySubset($this->node->getValidAttributes(), [
-            'ClaveProdServ',
-            'NoIdentificacion',
-            'Cantidad',
-            'Unidad',
-            'Descripcion',
-            'ValorUnitario',
-            'Importe',
-        ]);
-    }
 }

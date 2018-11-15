@@ -31,13 +31,4 @@ class EmisorTest extends NodeTest
             'RegimenFiscal' => '601',
         ]);
     }
-
-    public function testValidAttributes()
-    {
-        $this->assertArraySubset($this->node->getValidAttributes(), [
-            'Rfc',
-            'Nombre',
-            'RegimenFiscal',
-        ]);
-    }
 }

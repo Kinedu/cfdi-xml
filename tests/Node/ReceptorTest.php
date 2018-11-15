@@ -33,15 +33,4 @@ class ReceptorTest extends NodeTest
             'UsoCFDI' => 'G03',
         ]);
     }
-
-    public function testValidAttributes()
-    {
-        $this->assertArraySubset($this->node->getValidAttributes(), [
-            'Rfc',
-            'Nombre',
-            'ResidenciaFiscal',
-            'NumRegIdTrib',
-            'UsoCFDI',
-        ]);
-    }
 }

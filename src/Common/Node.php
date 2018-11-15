@@ -46,13 +46,6 @@ class Node
     protected $nodeName;
 
     /**
-     * Node valid attributes.
-     *
-     * @var array
-     */
-    protected $validAttributes;
-
-    /**
      * Node attributes.
      *
      * @var array
@@ -151,16 +144,6 @@ class Node
         }
 
         return null;
-    }
-
-    /**
-     * Get the node valid attributes.
-     *
-     * @return array
-     */
-    public function getValidAttributes(): array
-    {
-        return $this->validAttributes;
     }
 
     /**

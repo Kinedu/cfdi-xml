@@ -29,11 +29,4 @@ class InformacionAduaneraTest extends NodeTest
             'NumeroPedimento' => '10 47 3807 8003832',
         ]);
     }
-
-    public function testValidAttributes()
-    {
-        $this->assertArraySubset($this->node->getValidAttributes(), [
-            'NumeroPedimento',
-        ]);
-    }
 }

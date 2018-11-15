@@ -41,28 +41,4 @@ class ConceptoTest extends NodeTest
             'ValorUnitario' => 'I',
         ]);
     }
-
-    public function testValidAttributes()
-    {
-        $this->assertArraySubset($this->node->getValidAttributes(), [
-            'Version',
-            'Serie',
-            'Folio',
-            'Fecha',
-            'Sello',
-            'FormaPago',
-            'NoCertificado',
-            'Certificado',
-            'CondicionesDePago',
-            'SubTotal',
-            'Descuento',
-            'Moneda',
-            'TipoCambio',
-            'Total',
-            'TipoDeComprobante',
-            'MetodoPago',
-            'LugarExpedicion',
-            'Confirmacion',
-        ]);
-    }
 }
