@@ -17,6 +17,13 @@ use Kinedu\CfdiXML\Node\Complemento\Complemento;
 abstract class ComplementoTest extends TestCase
 {
     /**
+     * Define the parent node name.
+     *
+     * @var string
+     */
+    protected $wrapperNodeName = 'cfdi:Complemento';
+
+    /**
      * The node name.
      *
      * @var string
@@ -26,5 +33,13 @@ abstract class ComplementoTest extends TestCase
     public function setUp()
     {
         $this->node = new Complemento();
+    }
+
+    public function testWrapperNodeName()
+    {
+        $this->assertEquals(
+            $this->node->getWrapperNodeName(),
+            $this->wrapperNodeName
+        );
     }
 }

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Kinedu\CfdiXML\Node\Complemento;
+namespace Kinedu\CfdiXML\Node\Complemento\Pagos;
 
 use Kinedu\CfdiXML\Common\Node;
 
-class Complemento extends Node
+class DoctoRelacionado extends Node
 {
     /**
-     * Define the parent node name.
+     * Node name.
      *
      * @var string
      */
-    protected $wrapperNodeName = 'cfdi:Complemento';
+    protected $nodeName = 'pago10:DoctoRelacionado';
 }
