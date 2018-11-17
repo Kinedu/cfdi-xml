@@ -16,6 +16,13 @@ use Kinedu\CfdiXML\Node\Impuesto\Impuesto;
 
 class ImpuestoTest extends TestCase
 {
+    /**
+     * Define the parent node name.
+     *
+     * @var string
+     */
+    protected $wrapperNodeName = 'cfdi:Impuestos';
+
     public function setUp()
     {
         $this->node = new Impuesto();
@@ -25,7 +32,7 @@ class ImpuestoTest extends TestCase
     {
         $this->assertEquals(
             $this->node->getWrapperNodeName(),
-            'cfdi:Impuestos'
+            $this->wrapperNodeName
         );
     }
 }
