@@ -15,17 +15,9 @@ use Kinedu\CfdiXML\Common\Node;
 
 class Relacionado extends Node
 {
-    /**
-     * Parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:CfdiRelacionados';
 
-    /**
-     * Define the node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:CfdiRelacionado';
 }

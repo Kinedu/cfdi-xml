@@ -15,10 +15,6 @@ use Kinedu\CfdiXML\Common\Node;
 
 class Impuesto extends Node
 {
-    /**
-     * Wrapper node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $wrapperNodeName = 'cfdi:Impuestos';
 }

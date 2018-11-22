@@ -13,17 +13,9 @@ namespace Kinedu\CfdiXML\Node\Impuesto;
 
 class Retencion extends Impuesto
 {
-    /**
-     * Parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:Retenciones';
 
-    /**
-     * Node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Retencion';
 }

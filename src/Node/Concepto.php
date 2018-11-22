@@ -15,17 +15,9 @@ use Kinedu\CfdiXML\Common\Node;
 
 class Concepto extends Node
 {
-    /**
-     * Parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:Conceptos';
 
-    /**
-     * Define the node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Concepto';
 }

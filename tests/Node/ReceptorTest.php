@@ -16,11 +16,7 @@ use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class ReceptorTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Receptor';
 
     public function setUp()

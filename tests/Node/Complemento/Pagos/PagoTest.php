@@ -16,18 +16,10 @@ use Kinedu\CfdiXML\Common\Complemento\Pago;
 
 class PagoTest extends NodeTest
 {
-    /**
-     * Define the parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'pago10:Pagos';
 
-    /**
-     * Node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'pago10:Pago';
 
     public function setUp()

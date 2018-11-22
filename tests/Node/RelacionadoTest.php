@@ -16,18 +16,10 @@ use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class RelacionadoTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:CfdiRelacionados';
 
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:CfdiRelacionado';
 
     public function setUp()

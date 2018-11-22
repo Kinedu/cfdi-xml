@@ -15,10 +15,6 @@ use Kinedu\CfdiXML\Common\Node;
 
 class Emisor extends Node
 {
-    /**
-     * Node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Emisor';
 }

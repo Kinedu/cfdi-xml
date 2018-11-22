@@ -16,18 +16,10 @@ use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class ConceptoTest extends NodeTest
 {
-    /**
-     * The parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:Conceptos';
 
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Concepto';
 
     public function setUp()

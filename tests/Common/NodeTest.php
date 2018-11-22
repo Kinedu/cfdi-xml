@@ -15,18 +15,10 @@ use PHPUnit\Framework\TestCase;
 
 abstract class NodeTest extends TestCase
 {
-    /**
-     * The instance of the node.
-     *
-     * @var \Kinedu\CfdiXML\Common\Node
-     */
+    /** @var \Kinedu\CfdiXML\Common\Node */
     protected $node;
 
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName;
 
     public function testNodeName()

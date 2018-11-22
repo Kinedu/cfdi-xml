@@ -16,11 +16,7 @@ use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class EmisorTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Emisor';
 
     public function setUp()

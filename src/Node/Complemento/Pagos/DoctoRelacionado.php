@@ -15,10 +15,6 @@ use Kinedu\CfdiXML\Common\Node;
 
 class DoctoRelacionado extends Node
 {
-    /**
-     * Node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'pago10:DoctoRelacionado';
 }

@@ -35,8 +35,6 @@ class TimbreFiscalDigital extends Complemento
     }
 
     /**
-     *
-     *
      * @return array
      */
     public function attributes()

@@ -16,11 +16,7 @@ use Kinedu\CfdiXML\Common\Complemento\TimbreFiscalDigital;
 
 class TimbreFiscalDigitalTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'tfd:TimbreFiscalDigital';
 
     public function setUp()

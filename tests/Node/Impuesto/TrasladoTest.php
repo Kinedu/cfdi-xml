@@ -16,18 +16,10 @@ use Kinedu\CfdiXML\Node\Impuesto\Traslado;
 
 class TrasladoTest extends NodeTest
 {
-    /**
-     * The parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:Traslados';
 
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Traslado';
 
     public function setUp()

@@ -16,11 +16,7 @@ use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class ComprobanteTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Comprobante';
 
     public function setUp()

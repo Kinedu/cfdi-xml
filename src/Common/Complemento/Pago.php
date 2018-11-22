@@ -15,17 +15,9 @@ use Kinedu\CfdiXML\Common\Complemento;
 
 class Pago extends Complemento
 {
-    /**
-     * Define the parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'pago10:Pagos';
 
-    /**
-     * Node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'pago10:Pago';
 }

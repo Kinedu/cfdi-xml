@@ -13,17 +13,9 @@ namespace Kinedu\CfdiXML\Node\Impuesto;
 
 class Traslado extends Impuesto
 {
-    /**
-     * Parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:Traslados';
 
-    /**
-     * Node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Traslado';
 }

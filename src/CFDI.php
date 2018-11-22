@@ -18,39 +18,19 @@ use Kinedu\CfdiXML\Node\Comprobante;
 
 class CFDI
 {
-    /**
-     * SAT XSL endpoint.
-     *
-     * @var string
-     */
+    /** @var string */
     const XSL_ENDPOINT = 'http://www.sat.gob.mx/sitio_internet/cfd/3/cadenaoriginal_3_3/cadenaoriginal_3_3.xslt';
 
-    /**
-     * CFDI version.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $version = '3.3';
 
-    /**
-     * CSD key.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $key;
 
-    /**
-     * CSD cer.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $cer;
 
-    /**
-     * Comprobante instance.
-     *
-     * @var \Kinedu\CfdiXML\Node\Comprobante
-     */
+    /** @var \Kinedu\CfdiXML\Node\Comprobante */
     protected $comprobante;
 
     /**

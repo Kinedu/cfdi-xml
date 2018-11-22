@@ -16,11 +16,7 @@ use Kinedu\CfdiXML\Node\Complemento\Pagos\DoctoRelacionado;
 
 class DoctoRelacionadoTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'pago10:DoctoRelacionado';
 
     public function setUp()

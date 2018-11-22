@@ -16,18 +16,10 @@ use Kinedu\CfdiXML\Common\Complemento\IEDU;
 
 class IEDUTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'iedu:instEducativas';
 
-    /**
-     * The parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $parentNodeName = 'cfdi:ComplementoConcepto';
 
     public function setUp()

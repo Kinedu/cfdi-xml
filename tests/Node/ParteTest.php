@@ -16,11 +16,7 @@ use Kinedu\CfdiXML\Tests\Common\NodeTest;
 
 class ParteTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Parte';
 
     public function setUp()

@@ -16,11 +16,7 @@ use Kinedu\CfdiXML\Node\InformacionAduanera;
 
 class InformacionAduaneraTest extends NodeTest
 {
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:InformacionAduanera';
 
     public function setUp()

@@ -15,18 +15,10 @@ use Kinedu\CfdiXML\Common\Node;
 
 class Comprobante extends Node
 {
-    /**
-     * CFDI version.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $version;
 
-    /**
-     * Node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $nodeName = 'cfdi:Comprobante';
 
     /**

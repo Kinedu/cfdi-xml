@@ -16,18 +16,10 @@ use Kinedu\CfdiXML\Node\Complemento\Complemento;
 
 abstract class ComplementoTest extends TestCase
 {
-    /**
-     * Define the parent node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $wrapperNodeName = 'cfdi:Complemento';
 
-    /**
-     * The node name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $node;
 
     public function setUp()
