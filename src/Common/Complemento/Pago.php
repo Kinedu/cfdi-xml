@@ -19,6 +19,9 @@ class Pago extends Complemento
     protected $namespace = 'Pagos';
 
     /** @var string */
+    protected $namespaceKey = 'pago10';
+
+    /** @var string */
     protected $schemaDefinition = 'Pagos10';
 
     /** @var string */

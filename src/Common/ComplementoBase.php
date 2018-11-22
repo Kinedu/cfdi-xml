@@ -23,6 +23,9 @@ class ComplementoBase extends Node
     protected $namespace;
 
     /** @var string */
+    protected $namespaceKey;
+
+    /** @var string */
     protected $schemaDefinition;
 
     /** @var bool */

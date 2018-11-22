@@ -19,6 +19,9 @@ class IEDU extends ComplementoConcepto
     protected $namespace = 'iedu';
 
     /** @var string */
+    protected $namespaceKey = 'iedu';
+
+    /** @var string */
     protected $schemaDefinition = 'iedu';
 
     /** @var string */

@@ -87,6 +87,8 @@ class Node
             $this->setSchemaDefinition(
                 $node->getSchemaLocation()
             );
+
+            $this->setNamespace($node);
         }
 
         $nodeElement = $this->document->createElement($node->getNodeName());
@@ -150,6 +152,37 @@ class Node
         }
 
         return null;
+    }
+
+    /**
+     * @param  \Kinedu\CfdiXML\Common\Node  $node
+     * @return void
+     */
+    public function setNamespace(Node $node)
+    {
+        $element = $this->element;
+
+        $namespaceKey = "xmlns:{$node->namespaceKey}";
+        $namespaceValue = $node->getNamespace();
+
+        $elementAttr = [];
+
+        if ($element->hasAttributes()) {
+            $lastAttrName = null;
+
+            foreach (iterator_to_array($element->attributes) as $attr) {
+                if ((substr($lastAttrName, 0, 5) == 'xmlns') &&
+                    (substr($attr->name, 0, 5) != 'xmlns')) {
+                    $elementAttr[$namespaceKey] = $namespaceValue;
+                }
+
+                $elementAttr[$lastAttrName = $attr->name] = $attr->value;
+
+                $element->removeAttributeNode($attr);
+            }
+        }
+
+        $this->setAttr($element, $elementAttr);
     }
 
     /**
