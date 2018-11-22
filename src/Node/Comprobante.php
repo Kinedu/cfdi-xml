@@ -36,11 +36,6 @@ class Comprobante extends Node
         parent::__construct($data);
     }
 
-    /**
-     *
-     *
-     * @return array
-     */
     public function attributes(): array
     {
         return [

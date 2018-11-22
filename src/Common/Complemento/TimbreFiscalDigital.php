@@ -34,10 +34,7 @@ class TimbreFiscalDigital extends Complemento
         parent::__construct($data);
     }
 
-    /**
-     * @return array
-     */
-    public function attributes()
+    public function attributes(): array
     {
         return [
             'xmlns:tfd' => 'http://www.sat.gob.mx/TimbreFiscalDigital',
