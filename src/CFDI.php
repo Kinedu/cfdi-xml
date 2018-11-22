@@ -169,12 +169,6 @@ class CFDI
      */
     public function getXSL()
     {
-        $file = './xslt/cadenaoriginal_3_3.xslt';
-
-        if (file_exists($file)) {
-            return $file;
-        }
-
         return static::XSL_ENDPOINT;
     }
 }

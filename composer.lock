@@ -4,56 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "373ccdfb4d29d8b068eaafa36873f496",
-    "packages": [
-        {
-            "name": "kinedu/cfdi-xslt",
-            "version": "v0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Kinedu/cfdi-xslt.git",
-                "reference": "9bd2ff8af2efd641fab75c52422c09f7bd02bb0a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Kinedu/cfdi-xslt/zipball/9bd2ff8af2efd641fab75c52422c09f7bd02bb0a",
-                "reference": "9bd2ff8af2efd641fab75c52422c09f7bd02bb0a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Kinedu\\CfdiXslt\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Orlando Charles",
-                    "email": "orlando@kinedu.com",
-                    "homepage": "https://orlandocharles.com/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Librería para descargar los XSLT de la Cadena Original del Servicio de Administración Tributaria (SAT)",
-            "homepage": "https://github.com/Kinedu/cfdi-xslt",
-            "keywords": [
-                "Kinedu",
-                "cfdi",
-                "sat"
-            ],
-            "time": "2018-02-09T22:21:20+00:00"
-        }
-    ],
+    "content-hash": "7a43a1c42c771b22748cd83c98723de4",
+    "packages": [],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
