@@ -12,7 +12,7 @@
 namespace Kinedu\CfdiXML\Tests\Node\Complemento;
 
 use Kinedu\CfdiXML\Tests\Common\NodeTest;
-use Kinedu\CfdiXML\Node\Complemento\TimbreFiscalDigital;
+use Kinedu\CfdiXML\Common\Complemento\TimbreFiscalDigital;
 
 class TimbreFiscalDigitalTest extends NodeTest
 {

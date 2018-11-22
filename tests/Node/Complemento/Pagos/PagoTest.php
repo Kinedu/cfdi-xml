@@ -12,7 +12,7 @@
 namespace Kinedu\CfdiXML\Tests\Node\Complemento\Pagos;
 
 use Kinedu\CfdiXML\Tests\Common\NodeTest;
-use Kinedu\CfdiXML\Node\Complemento\Pagos\Pago;
+use Kinedu\CfdiXML\Common\Complemento\Pago;
 
 class PagoTest extends NodeTest
 {

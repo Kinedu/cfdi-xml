@@ -9,7 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Kinedu\CfdiXML\Node\Complemento;
+namespace Kinedu\CfdiXML\Common\Complemento;
+
+use Kinedu\CfdiXML\Common\Complemento;
 
 class TimbreFiscalDigital extends Complemento
 {

@@ -12,7 +12,7 @@
 namespace Kinedu\CfdiXML\Tests\Node\Impuesto;
 
 use Kinedu\CfdiXML\Tests\Common\NodeTest;
-use Kinedu\CfdiXML\Node\Complemento\Concepto\IEDU;
+use Kinedu\CfdiXML\Common\Complemento\IEDU;
 
 class IEDUTest extends NodeTest
 {

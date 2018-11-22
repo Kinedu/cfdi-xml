@@ -9,9 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Kinedu\CfdiXML\Node\Complemento;
-
-use Kinedu\CfdiXML\Common\Node;
+namespace Kinedu\CfdiXML\Common;
 
 class ComplementoConcepto extends Node
 {

@@ -9,16 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Kinedu\CfdiXML\Node\Complemento\Concepto;
+namespace Kinedu\CfdiXML\Common;
 
-use Kinedu\CfdiXML\Node\Complemento\ComplementoConcepto;
-
-class IEDU extends ComplementoConcepto
+class Complemento extends Node
 {
     /**
-     * The node name.
+     * Define the parent node name.
      *
      * @var string
      */
-    protected $nodeName = 'iedu:instEducativas';
+    protected $wrapperNodeName = 'cfdi:Complemento';
 }
