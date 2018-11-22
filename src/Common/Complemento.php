@@ -11,7 +11,7 @@
 
 namespace Kinedu\CfdiXML\Common;
 
-class Complemento extends Node
+class Complemento extends ComplementoBase
 {
     /** @var string */
     protected $wrapperNodeName = 'cfdi:Complemento';

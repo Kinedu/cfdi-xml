@@ -16,5 +16,11 @@ use Kinedu\CfdiXML\Common\ComplementoConcepto;
 class IEDU extends ComplementoConcepto
 {
     /** @var string */
+    protected $namespace = 'iedu';
+
+    /** @var string */
+    protected $schemaDefinition = 'iedu';
+
+    /** @var string */
     protected $nodeName = 'iedu:instEducativas';
 }

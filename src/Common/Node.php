@@ -83,6 +83,12 @@ class Node
     {
         $wrapperElement = null;
 
+        if ($node->schemaDefinition && $node->globalSchemaLocation) {
+            $this->setSchemaDefinition(
+                $node->getSchemaLocation()
+            );
+        }
+
         $nodeElement = $this->document->createElement($node->getNodeName());
         $this->setAttr($nodeElement, $node->getAttr());
 
@@ -144,6 +150,24 @@ class Node
         }
 
         return null;
+    }
+
+    /**
+     * @param  string  $schemaDefinition
+     * @return void
+     */
+    public function setSchemaDefinition(string $schemaDefinition)
+    {
+        $attrName = 'xsi:schemaLocation';
+
+        $node = $this->element;
+
+        if ($node->hasAttribute($attrName)) {
+            $value = $node->getAttribute($attrName);
+            $value = "{$value} {$schemaDefinition}";
+
+            $node->setAttribute($attrName, $value);
+        }
     }
 
     /**
