@@ -63,7 +63,6 @@ class Node
 
         $this->document = new DOMDocument('1.0', 'UTF-8');
         $this->document->preserveWhiteSpace = false;
-        $this->document->formatOutput = true;
 
         if ($nodeName = $this->getNodeName()) {
             $this->element = $this->document->createElement($nodeName);
