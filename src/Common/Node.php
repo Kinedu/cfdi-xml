@@ -82,8 +82,7 @@ class Node
     {
         $wrapperElement = null;
 
-        if ($this->hasSchemaDefinition($node) &&
-            $this->isGlobalDefinition($node)) {
+        if (isset($node->schemaDefinition) && $node->globalSchemaLocation) {
             $this->setSchemaDefinition(
                 $node->getSchemaLocation()
             );
@@ -286,15 +285,5 @@ class Node
     public function getNodeName()
     {
         return $this->nodeName ?? null;
-    }
-
-    public function hasSchemaDefinition(Node $node): bool
-    {
-        return isset($node->schemaDefinition) && $node->schemaDefinition;
-    }
-
-    public function isGlobalDefinition(Node $node): bool
-    {
-        return $this->hasSchemaDefinition() && $node->globalSchemaLocation;
     }
 }
