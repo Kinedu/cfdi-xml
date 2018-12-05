@@ -33,11 +33,6 @@
             "Kinedu\\CfdiXML\\Tests\\": "tests"
         }
     },
-    "scripts": {
-        "download-xslt": [
-            "\\Kinedu\\CfdiXML\\XSLT::download"
-        ]
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
