@@ -24,6 +24,11 @@ class IEDUTest extends NodeTest
 
     public function setUp()
     {
-        $this->node = new IEDU();
+        $this->node = new IEDU([
+            'nombreAlumno' => 'John Doe',
+            'CURP' => 'XXXXXX',
+            'nivelEducativo' => 'Preescolar',
+            'autRVOE' => 'XXXXXX'
+        ]);
     }
 }
