@@ -26,4 +26,16 @@ class IEDU extends ComplementoConcepto
 
     /** @var string */
     protected $nodeName = 'iedu:instEducativas';
+
+    /**
+     * Create a new iedu instance.
+     *
+     * @param  array  $attributes
+     */
+    public function __construct(array $attributes)
+    {
+        $attributes = array_merge(['version' => '1.0'], $attributes);
+
+        parent::__construct($attributes);
+    }
 }
