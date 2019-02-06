@@ -52,6 +52,8 @@ class Node
      */
     protected $attr = [];
 
+    protected $outstandingReferences;
+
     /**
      * Create a new node instance.
      *
@@ -81,6 +83,14 @@ class Node
     public function add(Node $node)
     {
         $wrapperElement = null;
+
+        if ($node->hasOutstandingReferences()) {
+            $schemaDefinition = $node->outstandingReferences['schema_definition'];
+            $namespace = $node->outstandingReferences['namespace'];
+
+            $this->setSchemaDefinition($schemaDefinition);
+            $this->setNamespace($namespace);
+        }
 
         if (isset($node->schemaDefinition) && $node->globalSchemaLocation) {
             $this->setSchemaDefinition(
@@ -161,27 +171,31 @@ class Node
     {
         $element = $this->element;
 
-        $namespaceKey = "xmlns:{$node->namespaceKey}";
-        $namespaceValue = $node->getNamespace();
+        if ($element->tagName == 'cfdi:Comprobante') {
+            $namespaceKey = "xmlns:{$node->namespaceKey}";
+            $namespaceValue = $node->getNamespace();
 
-        $elementAttr = [];
+            $elementAttr = [];
 
-        if ($element->hasAttributes()) {
-            $lastAttrName = null;
+            if ($element->hasAttributes()) {
+                $lastAttrName = null;
 
-            foreach (iterator_to_array($element->attributes) as $attr) {
-                if ((substr($lastAttrName, 0, 5) == 'xmlns') &&
-                    (substr($attr->name, 0, 5) != 'xmlns')) {
-                    $elementAttr[$namespaceKey] = $namespaceValue;
+                foreach (iterator_to_array($element->attributes) as $attr) {
+                    if ((substr($lastAttrName, 0, 5) == 'xmlns') &&
+                        (substr($attr->name, 0, 5) != 'xmlns')) {
+                        $elementAttr[$namespaceKey] = $namespaceValue;
+                    }
+
+                    $elementAttr[$lastAttrName = $attr->name] = $attr->value;
+
+                    $element->removeAttributeNode($attr);
                 }
-
-                $elementAttr[$lastAttrName = $attr->name] = $attr->value;
-
-                $element->removeAttributeNode($attr);
             }
-        }
 
-        $this->setAttr($element, $elementAttr);
+            $this->setAttr($element, $elementAttr);
+        } else {
+            $this->outstandingReferences['namespace'] = $node;
+        }
     }
 
     /**
@@ -199,7 +213,14 @@ class Node
             $value = "{$value} {$schemaDefinition}";
 
             $node->setAttribute($attrName, $value);
+        } else {
+            $this->outstandingReferences['schema_definition'] = $schemaDefinition;
         }
+    }
+
+    private function hasOutstandingReferences(): bool
+    {
+        return !! $this->outstandingReferences;
     }
 
     /**
