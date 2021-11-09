@@ -19,7 +19,7 @@ class InformacionAduaneraTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:InformacionAduanera';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new InformacionAduanera([
             'NumeroPedimento' => '10 47 3807 8003832',

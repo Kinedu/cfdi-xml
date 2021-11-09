@@ -22,7 +22,7 @@ class ConceptoTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:Concepto';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Concepto([
             'ClaveProdServ' => '60121001',

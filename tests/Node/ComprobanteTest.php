@@ -19,7 +19,7 @@ class ComprobanteTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:Comprobante';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Comprobante([
             'Serie' => 'A',

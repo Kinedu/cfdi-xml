@@ -19,7 +19,7 @@ class ParteTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:Parte';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Parte([
             'ClaveProdServ' => '41116401',

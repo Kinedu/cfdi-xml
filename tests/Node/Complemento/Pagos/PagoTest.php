@@ -22,7 +22,7 @@ class PagoTest extends NodeTest
     /** @var string */
     protected $nodeName = 'pago10:Pago';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Pago([
             'FechaPago' => '2018-01-01T12:00:00',

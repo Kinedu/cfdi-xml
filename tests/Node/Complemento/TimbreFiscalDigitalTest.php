@@ -19,7 +19,7 @@ class TimbreFiscalDigitalTest extends NodeTest
     /** @var string */
     protected $nodeName = 'tfd:TimbreFiscalDigital';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new TimbreFiscalDigital([
             'Version' => '1.1',

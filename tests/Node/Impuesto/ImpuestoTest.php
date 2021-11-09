@@ -19,7 +19,7 @@ class ImpuestoTest extends TestCase
     /** @var string */
     protected $wrapperNodeName = 'cfdi:Impuestos';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Impuesto();
     }
