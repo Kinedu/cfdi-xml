@@ -22,7 +22,7 @@ class IEDUTest extends NodeTest
     /** @var string */
     protected $parentNodeName = 'cfdi:ComplementoConcepto';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new IEDU([
             'nombreAlumno' => 'John Doe',

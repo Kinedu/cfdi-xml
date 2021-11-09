@@ -22,7 +22,7 @@ abstract class ComplementoTest extends TestCase
     /** @var string */
     protected $node;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Complemento();
     }

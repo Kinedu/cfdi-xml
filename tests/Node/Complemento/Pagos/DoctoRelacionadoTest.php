@@ -19,7 +19,7 @@ class DoctoRelacionadoTest extends NodeTest
     /** @var string */
     protected $nodeName = 'pago10:DoctoRelacionado';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new DoctoRelacionado([
             'IdDocumento' => '307d70bc-7007-4bed-9b54-b3f57421f2c4',

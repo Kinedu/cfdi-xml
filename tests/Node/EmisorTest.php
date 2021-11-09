@@ -19,7 +19,7 @@ class EmisorTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:Emisor';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Emisor([
             'Rfc' => 'XAXX010101000',

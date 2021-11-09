@@ -22,7 +22,7 @@ class RetencionTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:Retencion';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Retencion();
     }

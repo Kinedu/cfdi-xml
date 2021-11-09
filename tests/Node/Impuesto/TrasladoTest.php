@@ -22,7 +22,7 @@ class TrasladoTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:Traslado';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Traslado();
     }

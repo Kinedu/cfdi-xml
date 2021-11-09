@@ -19,7 +19,7 @@ class ReceptorTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:Receptor';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Receptor([
             'Rfc' => 'XEXX010101000',

@@ -22,7 +22,7 @@ class RelacionadoTest extends NodeTest
     /** @var string */
     protected $nodeName = 'cfdi:CfdiRelacionado';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->node = new Relacionado([
             'UUID' => '5FB2822E-396D-4725-8521-CDC4BDD20CCF',
